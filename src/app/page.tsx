@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import { Box } from "@mui/material";
 import React from "react";
 import "../styles/home.css";
@@ -20,7 +20,7 @@ export default function Home() {
       <Box className="squared-paper" style={{ textAlign: "center" }}>
         <h1>Hello everyone. My name is Matheus Pontes Vilas Boas!</h1>
         <br />
-        <p>This is my sketchbook, where you'll find all useful information about me.</p>
+        <p>This is my sketchbook, where you&apos;ll find all useful information about me.</p>
         <br />
         <p>Just so you know, I am a software developer currently working in web development, but I also engage in research and studies involving artificial intelligence. Additionally, I am a computer science student. </p>
         <br />
