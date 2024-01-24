@@ -1,95 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
+"use client"
+import { Box } from "@mui/material";
+import React from "react";
+import "../styles/home.css";
+import Link from "next/link";
+// TODO: create the page about my story with paragraphs and pictures of myself
+// TODO: deploy the website on vercel or somewhere else
 export default function Home() {
+  const handleDownloadClick = () => {
+    const pdfUrl = "/resume-mpvb.pdf";
+    const tempLink = document.createElement("a");
+    tempLink.href = pdfUrl;
+    tempLink.setAttribute("download", "resume-mpvb.pdf");
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    document.body.removeChild(tempLink);
+  };
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <div className="home-container">
+      <Box className="squared-paper" style={{ textAlign: "center" }}>
+        <h1>Hello everyone. My name is Matheus Pontes Vilas Boas!</h1>
+        <br />
+        <p>This is my sketchbook, where you'll find all useful information about me.</p>
+        <br />
+        <p>Just so you know, I am a software developer currently working in web development, but I also engage in research and studies involving artificial intelligence. Additionally, I am a computer science student. </p>
+        <br />
+        <p>By clicking <u><b><a href={"#"} target="_blank" rel="noopener noreferrer">here</a></b></u>, you can learn a bit about my story.</p>
+        <br />
+        <p>On my <u><b><a href={"https://www.github.com/pontesvilasboas"} className="custom-link" target="_blank" rel="noopener noreferrer">Github</a></b></u>, you can find my projects.</p>
+        <br />
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          On my <u><b><a href={"https://www.linkedin.com/in/pontesvilasboas/"}  className="custom-link" target="_blank" rel="noopener noreferrer">Linkedin</a></b></u>, you can learn more about my academic and professional career, as well as get in touch with me.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <br />
+        <p>
+          But if you prefer not to contact me through LinkedIn, feel free to access my <u><b><a href={"https://www.instagram.com/matheuspvilasboas"} className="custom-link" target="_blank" rel="noopener noreferrer">Instagram</a></b></u> or even send an email to:
+          <u><b>pontesvilasboas@gmail.com</b></u>.
+        </p>
+        <br />
+        <p>And if you're interested, feel free to <u><b><a href="#" onClick={handleDownloadClick} className="custom-link">download</a></b></u> my resume.</p>
+      </Box>
+    </div>
   );
 }
