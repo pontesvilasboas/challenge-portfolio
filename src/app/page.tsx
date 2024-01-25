@@ -24,8 +24,6 @@ export default function Home() {
         <br />
         <p>Just so you know, I am a software developer currently working in web development, but I also engage in research and studies involving artificial intelligence. Additionally, I am a computer science student. </p>
         <br />
-        <p>By clicking <u><b><a href={"#"} target="_blank" rel="noopener noreferrer">here</a></b></u>, you can learn a bit about my story.</p>
-        <br />
         <p>On my <u><b><a href={"https://www.github.com/pontesvilasboas"} className="custom-link" target="_blank" rel="noopener noreferrer">Github</a></b></u>, you can find my projects.</p>
         <br />
         <p>
@@ -37,7 +35,7 @@ export default function Home() {
           <u><b>pontesvilasboas@gmail.com</b></u>.
         </p>
         <br />
-        <p>And if you're interested, feel free to <u><b><a href="#" onClick={handleDownloadClick} className="custom-link">download</a></b></u> my resume.</p>
+        <p>And if you&apos;re interested, feel free to <u><b><a href="#" onClick={handleDownloadClick} className="custom-link">download</a></b></u> my resume.</p>
       </Box>
     </div>
   );
